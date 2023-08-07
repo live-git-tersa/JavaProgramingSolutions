@@ -10,13 +10,13 @@ public class DecimalComparator{
        if ((a-b) == 0 ){
            return true;
        
-       } else if (a &gt; 0 &amp;&amp; b &gt; 0 ){
+       } else if (a >= 0 && b >= 0 ){
            return false;
        } 
-       else if (a &gt; 0 &amp;&amp; b &lt; 0 || a&lt;0 &amp;&amp; b &gt; 0){
+       else if (a >= 0 && b <= 0 || a <= 0 && b >= 0){
             return false;
        } 
-       else if ((a-b) &gt; 0.0001 ) {
+       else if ((a-b) <= 0.0001 ) {
             
        return true;
        } 
