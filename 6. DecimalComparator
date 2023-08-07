@@ -1,0 +1,25 @@
+DecimalComparator
+Write a method areEqualByThreeDecimalPlaces with two parameters of type double.
+The method should return boolean and it needs to return true if two double numbers are the same up to three decimal places. Otherwise, return false.
+
+public class DecimalComparator{
+    
+    public static boolean areEqualByThreeDecimalPlaces(double x, double y){
+      double a = Math.round(x*1000.0)/1000;
+      double b = Math.round(y*1000.0)/1000;
+       if ((a-b) == 0 ){
+           return true;
+       
+       } else if (a &gt; 0 &amp;&amp; b &gt; 0 ){
+           return false;
+       } 
+       else if (a &gt; 0 &amp;&amp; b &lt; 0 || a&lt;0 &amp;&amp; b &gt; 0){
+            return false;
+       } 
+       else if ((a-b) &gt; 0.0001 ) {
+            
+       return true;
+       } 
+       return false;
+    }
+}
